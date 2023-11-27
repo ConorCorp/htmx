@@ -995,8 +995,10 @@ Here is an example of an input that uses the `htmx:validation:validate` event to
                 if my.value != 'foo'
                     call me.setCustomValidity('Please enter the value foo')
                     call #foo-form.reportValidity()
-                else
-                    call me.setCustomValidity('')"
+                end
+                
+                on keyup
+                call me.setCustomValidity('')"
         name="example"
     >
 </form>
